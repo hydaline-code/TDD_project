@@ -1,6 +1,7 @@
 require_relative '../solver'
 
 RSpec.describe Solver do
+    # test for factorial
   describe '#factorial' do
     it 'returns the factorial for a positive number' do
       solver = Solver.new
@@ -22,6 +23,21 @@ RSpec.describe Solver do
     it 'raises an exception for a non-integer input' do
       solver = Solver.new
       expect { solver.factorial('not_integer') }.to raise_error(StandardError)
+    end
+  end
+
+    #test for reverse
+  describe '#reverse' do
+    it 'returns the reversed string for a valid input' do
+      solver = Solver.new
+      result = solver.reverse('hello')
+      expect(result).to eq('olleh')
+    end
+
+    it 'returns an empty string for an empty input' do
+      solver = Solver.new
+      result = solver.reverse('')
+      expect(result).to eq('')
     end
   end
 end
