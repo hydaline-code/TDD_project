@@ -1,7 +1,7 @@
 require_relative '../solver'
 
 RSpec.describe Solver do
-    # test for factorial
+  # test for factorial
   describe '#factorial' do
     it 'returns the factorial for a positive number' do
       solver = Solver.new
@@ -26,7 +26,7 @@ RSpec.describe Solver do
     end
   end
 
-    #test for reverse
+  # test for reverse
   describe '#reverse' do
     it 'returns the reversed string for a valid input' do
       solver = Solver.new
@@ -66,5 +66,4 @@ RSpec.describe Solver do
       expect(solver.fizzbuzz(11)).to eq('11')
     end
   end
-
 end
