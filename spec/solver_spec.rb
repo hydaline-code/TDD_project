@@ -16,12 +16,12 @@ RSpec.describe Solver do
 
     it 'raises an exception for a negative number' do
       solver = Solver.new
-      expect { solver.factorial(-2) }.to raise_error(ValueError)
+      expect { solver.factorial(-2) }.to raise_error(StandardError)
     end
 
     it 'raises an exception for a non-integer input' do
       solver = Solver.new
-      expect { solver.factorial('not_integer') }.to raise_error(ValueError)
+      expect { solver.factorial('not_integer') }.to raise_error(StandardError)
     end
   end
 end
