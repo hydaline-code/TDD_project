@@ -1,10 +1,9 @@
 class Solver
-  def factorial(n)
-    raise StandardError, 'Input must be a positive integer' if !n.is_a?(Integer) || n.negative?
 
-    result = 1
-    (1..n).each { |i| result *= i }
-    result
+  def factorial(number)
+    raise StandardError, 'Input must be a positive integer' unless number.is_a?(Integer) && number >= 0
+  
+    (1..number).reduce(1, :*)
   end
 
   def reverse(word)
